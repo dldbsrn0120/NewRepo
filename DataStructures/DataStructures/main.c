@@ -11,6 +11,9 @@ int main(void)
 	arrList_int = MemAllocation("int", 20);
 	arrList_double = MemAllocation("double", 20);
 
+	printf("%d ", getArraySize(arrList_int));
+	printf("%d\n", getArraySize(arrList_double));
+
 	MemFree(arrList_int);
 	MemFree(arrList_double);
 

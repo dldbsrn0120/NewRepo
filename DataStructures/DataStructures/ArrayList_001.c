@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <malloc.h>
 // ArrayList 001
 
 // param_type : int, double, char, string
@@ -26,13 +27,14 @@ void* MemAllocation(char* param_type, int size) {
 
 	} else {
 		arr = NULL;
-
 	}
-
 	return arr;
+}
+
+int getArraySize(void* arr) {
+	return _msize(arr);
 }
 
 void MemFree(void* arr) {
 	free(arr);
-
 }
