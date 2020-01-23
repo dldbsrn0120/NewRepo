@@ -1,11 +1,14 @@
 #pragma warning(disable:4996)
+#include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 // ArrayList 001
 
 // param_type : int, double, char, string
 
-void* MemAllocation(void* arr, char* param_type, int size) {
+void* MemAllocation(char* param_type, int size) {
+
+	void* arr;
 
 	if (!strcmp(param_type, "int")) {
 		arr = (int*)malloc(sizeof(int)*size);
