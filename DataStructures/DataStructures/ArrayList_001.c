@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <malloc.h>
+
 // ArrayList 001
 
 // param_type : int, double, char, string
@@ -29,6 +30,19 @@ void* MemAllocation(char* param_type, int size) {
 		arr = NULL;
 	}
 	return arr;
+}
+
+int searchIntegerValuePos(int* arr, int value, int size) {
+	
+	int i;
+
+	for (i = 0; i < size; i++) {
+		if (arr[i] == value);
+		break;
+	}
+
+	if (i >= size) return -1;
+	else return i;
 }
 
 int getArraySize(void* arr) {
